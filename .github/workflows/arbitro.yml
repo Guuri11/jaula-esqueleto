@@ -6,9 +6,11 @@ jobs:
   arbitro:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: pnpm/action-setup@v4
-      - uses: actions/setup-node@v4
+        with:
+          version: 12.14.0
+      - uses: actions/setup-node@v5
         with:
           node-version: 25
           cache: pnpm
@@ -17,7 +19,7 @@ jobs:
       # Holdout: un repo privado que el agente nunca ve. Opcional: define el secreto HOLDOUT_REPO_TOKEN
       # y la variable HOLDOUT_REPO (owner/repo) para activarlo.
       - if: ${{ vars.HOLDOUT_REPO != '' }}
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           repository: ${{ vars.HOLDOUT_REPO }}
           token: ${{ secrets.HOLDOUT_REPO_TOKEN }}

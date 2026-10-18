@@ -4,7 +4,7 @@
   ".claude/commands/implementa.md": "6f590dca2d64a32f3e411bc42c925c8cf310555bcb4f04256445e9e3f9884431",
   ".claude/settings.json": "26cbea185756e94dc13d051e05d7c3c5d2c1ad7668956dcab4636d70bc224b74",
   ".claude/skills/forja/SKILL.md": "fe273a51d32e8fc798540e213120d5232d6d21bf8806ffd52c838976166ccb56",
-  ".github/workflows/arbitro.yml": "5f743dfa2893127d1e8b015f75dd9e4bb0845e328c5fa9827ed14e0efaee28b7",
+  ".github/workflows/arbitro.yml": "c01cce6315325bf02166fd6597be7e688797b0f28338d0c80bf7d0886ebbcae6",
   ".pi/settings.json": "5696ae3dba22c26e3582011541183a5be2fb9ddd0ebb91815c688bf27561bb31",
   ".vite-hooks/pre-commit": "181de147e6dd2b1dfcf7cffda78037678cc184bd392b921dc4e62b84324b2d28",
   "AGENTS.md": "04a1b4c5af68a27d66c34b8853c3b058fd7c2e4acbfa19a4bf9cf15d5adde811",
