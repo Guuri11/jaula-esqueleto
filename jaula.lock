@@ -36,7 +36,7 @@
   "jaula/vite.ts": "afcb426a0627a85abe6dfdd40bd02312ec51af21358f687c7cad26de3d9a9621",
   "package.json": "4e954137b20a23d28010986e3e7f3c5ddc65818ae7236bef22bc511835881878",
   "pnpm-lock.yaml": "1a7e980c8297130ec7a69c21fe92f9d5dcd13b7f94d69b7eb537827b8ed9efa0",
-  "pnpm-workspace.yaml": "4b05c81ff0dc17b2b4df3b7275b530f9d7447ab69d2bb3ef12e35e236b47b867",
+  "pnpm-workspace.yaml": "a43d5da9594128279ace503865f1182e8339f0bebedac094b03f1dd2b13e502d",
   "spec/arquitectura.spec.ts": "11fdfa07c67b22b7657de9f9643e318f571e6d7f6d496516ec4637c440455730",
   "spec/carrito/carrito.spec.ts": "9bc2b9ee762e85c3b4d5734c2c8826b5ab5c16f53199755818c5fabfab7574cf",
   "spec/carrito/sonda.ts": "5b98297b068dd5dc47cf2a58d0ffd9343df67ce00f72d328786547f2ad7bb3cb",

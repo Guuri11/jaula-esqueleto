@@ -8,3 +8,8 @@ peerDependencyRules:
     - vite
   allowedVersions:
     vite: "*"
+
+# Build scripts de dependencias de los tipos de pi que no hacen falta (pnpm los rechaza en CI si no se declaran).
+allowBuilds:
+  "@google/genai": false
+  protobufjs: false
