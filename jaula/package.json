@@ -1,0 +1,23 @@
+{
+  "name": "jaula-kit",
+  "private": true,
+  "description": "Maquinaria de la jaula determinista. También es un paquete de pi (extensión, skill forja y prompts).",
+  "keywords": [
+    "pi-package"
+  ],
+  "type": "module",
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "pi": {
+    "extensions": [
+      "./pi/extension.ts"
+    ],
+    "skills": [
+      "./skills"
+    ],
+    "prompts": [
+      "./prompts/htdf.md"
+    ]
+  }
+}

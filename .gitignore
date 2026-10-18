@@ -1,0 +1,13 @@
+node_modules
+dist
+*.log
+.DS_Store
+.env
+.env.*
+!.env.example
+
+# jaula
+.candidatos/
+.abogado/
+reports/
+.stryker-tmp/

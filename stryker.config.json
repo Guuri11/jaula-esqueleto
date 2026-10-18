@@ -1,0 +1,23 @@
+{
+  "$schema": "./node_modules/@stryker-mutator/core/schema/stryker-schema.json",
+  "mutate": ["core/**/*.ts"],
+  "testRunner": "command",
+  "commandRunner": {
+    "command": "vp test run --exclude spec/arquitectura.spec.ts"
+  },
+  "coverageAnalysis": "off",
+  "reporters": ["clear-text", "progress", "html"],
+  "thresholds": {
+    "high": 90,
+    "low": 75,
+    "break": 75
+  },
+  "tempDirName": ".stryker-tmp",
+  "tsconfigFile": ".stryker-sin-tsconfig.json",
+  "_notas": [
+    "Stryker instrumenta core/ con @ts-nocheck: la regla de arquitectura no aplica a los mutantes.",
+    "TypeScript 7 no expone la API JS que usa el preprocesado de tsconfig de Stryker: se desactiva apuntando a un fichero inexistente.",
+    ".claude contiene enlaces a carpetas que el sandbox de Stryker no sabe copiar."
+  ],
+  "ignorePatterns": [".claude", ".pi", ".github", ".candidatos", ".abogado"]
+}

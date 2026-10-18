@@ -1,0 +1,35 @@
+{
+  "name": "mi-proyecto",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Proyecto con jaula determinista: spec humana sellada, núcleo puro que escribe la IA",
+  "license": "MIT",
+  "type": "module",
+  "imports": {
+    "#jaula/arnes": "./jaula/arnes/index.ts",
+    "#nucleo/*": "./core/*"
+  },
+  "scripts": {
+    "jaula": "node jaula/cli.ts",
+    "test": "vp test run",
+    "check": "vp check",
+    "arbitro": "node jaula/cli.ts arbitro --completo",
+    "mutacion": "stryker run",
+    "prepare": "vp config"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-coding-agent": "1.3.0",
+    "@stryker-mutator/core": "^10.0.0",
+    "@types/node": "^26.6.5",
+    "fast-check": "^4.10.2",
+    "typescript": "^7.0.2",
+    "vite-plus": "catalog:"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "12.14.0",
+      "onFail": "download"
+    }
+  }
+}

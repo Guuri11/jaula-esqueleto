@@ -1,0 +1,28 @@
+# El árbitro en CI: integridad de la jaula, tipos/lint, spec + holdout oculto y mutation testing.
+name: arbitro
+on: [push, pull_request]
+
+jobs:
+  arbitro:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 25
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+
+      # Holdout: un repo privado que el agente nunca ve. Opcional: define el secreto HOLDOUT_REPO_TOKEN
+      # y la variable HOLDOUT_REPO (owner/repo) para activarlo.
+      - if: ${{ vars.HOLDOUT_REPO != '' }}
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ vars.HOLDOUT_REPO }}
+          token: ${{ secrets.HOLDOUT_REPO_TOKEN }}
+          path: .holdout
+      - run: pnpm jaula arbitro --completo
+        env:
+          JAULA_HOLDOUT: ${{ vars.HOLDOUT_REPO != '' && '.holdout' || '' }}
+      - run: pnpm mutacion

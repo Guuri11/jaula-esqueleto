@@ -1,0 +1,55 @@
+{
+  "permissions": {
+    "deny": [
+      "Edit(/spec/**)",
+      "Edit(/jaula/**)",
+      "Edit(/.pi/**)",
+      "Edit(/.claude/**)",
+      "Edit(/.github/**)",
+      "Edit(/.vite-hooks/pre-commit)",
+      "Edit(/AGENTS.md)",
+      "Edit(/CLAUDE.md)",
+      "Edit(/vite.config.ts)",
+      "Edit(/tsconfig.json)",
+      "Edit(/package.json)",
+      "Edit(/pnpm-lock.yaml)",
+      "Edit(/pnpm-workspace.yaml)",
+      "Edit(/stryker.config.json)",
+      "Edit(/jaula.config.json)",
+      "Edit(/jaula.lock)"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash|Edit|Write|MultiEdit|NotebookEdit|Read|Grep|Glob",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR/jaula/claude/hook.ts\" pre"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR/jaula/claude/hook.ts\" prompt"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR/jaula/claude/hook.ts\" stop"
+          }
+        ]
+      }
+    ]
+  }
+}

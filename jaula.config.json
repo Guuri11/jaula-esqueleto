@@ -1,0 +1,28 @@
+{
+  "spec": "spec",
+  "nucleo": "core",
+  "protegidos": [
+    "spec/",
+    "jaula/",
+    ".pi/",
+    ".claude/",
+    ".github/",
+    ".vite-hooks/pre-commit",
+    "AGENTS.md",
+    "CLAUDE.md",
+    "vite.config.ts",
+    "tsconfig.json",
+    "package.json",
+    "pnpm-lock.yaml",
+    "pnpm-workspace.yaml",
+    "stryker.config.json",
+    "jaula.config.json",
+    "jaula.lock"
+  ],
+  "comandos": {
+    "test": ["vp", "test", "run"],
+    "check": ["vp", "check"]
+  },
+  "agenteHeadless": "pi",
+  "reintentosArbitro": 3
+}
