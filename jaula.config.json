@@ -3,6 +3,7 @@
   "nucleo": "core",
   "protegidos": [
     "spec/",
+    "docs/",
     "jaula/",
     ".pi/",
     ".claude/",

@@ -2,6 +2,7 @@
   "permissions": {
     "deny": [
       "Edit(/spec/**)",
+      "Edit(/docs/**)",
       "Edit(/jaula/**)",
       "Edit(/.pi/**)",
       "Edit(/.claude/**)",
