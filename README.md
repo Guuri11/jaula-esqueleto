@@ -7,6 +7,9 @@ Dentro de la jaula la IA es libre; la jaula no la toca.
 Funciona igual con **[pi](https://github.com/earendil-works/pi)** y con **[Claude Code](https://code.claude.com)**:
 el candado y el árbitro son una sola implementación (`jaula/lib/`) con un adaptador fino para cada agente.
 
+**¿Nuevo aquí?** Lee [por qué existe](docs/README.md), las [decisiones (ADR)](docs/adr/README.md), la
+[bibliografía](docs/bibliografia.md) y la [guía para proyectos nuevos](docs/guia-proyectos-nuevos.md).
+
 Stack: TypeScript · [Vite+](https://viteplus.dev) (`vp`: Vitest, Oxlint, Oxfmt, tsgo) · fast-check · Stryker.
 
 ## Empezar un proyecto
@@ -101,4 +104,3 @@ Para un monorepo, la forma más simple hoy es una jaula por paquete (cada uno co
   tsconfig y excluye la regla de arquitectura (Stryker añade `@ts-nocheck` a los mutantes).
 - Que la sonda no encuentre discrepancias no prueba que la spec esté completa: implementaciones del mismo modelo
   fallan de forma correlacionada. Por eso compara siempre contra `core/`.
-- El workflow de CI no se ha ejecutado todavía en GitHub.
